@@ -7,24 +7,22 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="5dp">
+        android:paddingStart="3dp">
 
         <LinearLayout
             android:id="@+id/edit_attribute_fielditem_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:background="@color/white"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingStart="5dp">
 
             <TextView
                 android:id="@+id/edit_attribute_fielditem_txtName"
-                android:layout_width="60dp"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="key"
-                android:textSize="14sp" />
+                android:text="key"/>
 
             <TextView
                 android:id="@+id/textView8"
@@ -37,10 +35,11 @@
                 android:id="@+id/edit_attribute_fielditem_txtValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:layout_weight="1"
+                android:paddingTop="3dp"
                 android:text="null"
-                android:textSize="14sp" />
+
+                android:textSize="14sp"/>
 
         </LinearLayout>
 

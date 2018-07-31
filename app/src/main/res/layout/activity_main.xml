@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     tools:context="com.example.hp.attribute.MainActivity">
 <RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
     <com.esri.arcgisruntime.mapping.view.MapView
         android:id="@+id/mapView"
         android:layout_width="fill_parent"
@@ -22,9 +22,16 @@
     <include
         android:id="@+id/list_layout_include"
         layout="@layout/list_layout"
-        android:layout_width="350dp"
+        android:layout_width="510dp"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"/>
+
+    <GridView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="4"
+        ></GridView>
 
 </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

@@ -7,25 +7,23 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="5dp">
+        android:paddingStart="1dp">
 
         <LinearLayout
             android:id="@+id/query_attribute_fielditem_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_height="30dp"
             android:background="@color/white"
             android:clickable="true"
             android:orientation="horizontal"
-            android:padding="5dp">
+            android:paddingStart="5dp">
 
             <TextView
                 android:id="@+id/query_attribute_fielditem_txtName"
-                android:layout_width="60dp"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="key"
-                android:textSize="14sp"/>
+                android:text="key" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -39,9 +37,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:gravity="center_vertical"
                 android:layout_weight="1"
-                android:text="null"
-                android:textSize="14sp"/>
+                android:text="null" />
 
         </LinearLayout>
 

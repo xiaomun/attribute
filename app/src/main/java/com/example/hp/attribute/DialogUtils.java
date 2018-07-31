@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.GridView;
 import android.widget.ListView;
 
 import com.esri.arcgisruntime.data.Feature;
@@ -83,7 +84,7 @@ public class DialogUtils {
         // set up local variables  设置局部变量
         inflator = LayoutInflater.from(context);
         listLayout = inflator.inflate(R.layout.list_layout, null);
-        listView = (ListView) listLayout.findViewById(R.id.list_view);
+        listView = (ListView) listLayout.findViewById(R.id.list_view1);
         builder.setView(listLayout);
 
 
@@ -92,6 +93,5 @@ public class DialogUtils {
         builder.create().show();
 
     }
-
-
+    
 }

@@ -4,6 +4,6 @@
     <string name="location_permission_denied">Shapefile 无法打开，因为存储访问权限被拒绝！</string>
     <string name="btn_edit_apply">保存</string>
     <string name="btn_edit_discard">取消</string>
-    <string name="textview">属性信息</string>
+    <string name="textView">属性信息</string>
     <string name="btn_selectPicture">选择照片</string>
 </resources>

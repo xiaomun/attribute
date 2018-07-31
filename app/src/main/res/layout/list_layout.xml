@@ -9,11 +9,10 @@
     <RelativeLayout
         android:id="@+id/lyt_btn_container"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="43dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:gravity="center_horizontal"
-
         android:textSize="18sp"
         android:textStyle="bold">
 
@@ -24,83 +23,209 @@
             android:textStyle="bold"
             android:textSize="17sp"
             android:layout_centerInParent="true"
-            android:text="@string/textview"/>
+            android:text="@string/textView"/>
 
-        <Button
-            android:id="@+id/btn_edit_save"
-            android:layout_width="wrap_content"
+        <ImageButton
+            android:id="@+id/imgBtn_edit_save"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
-            android:drawableTop="@mipmap/field"
-            android:text="@string/btn_edit_apply" />
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"
+            android:layout_marginStart="17dp"
+            android:background="@color/white"
+            android:scaleType="fitCenter"
+            android:src="@drawable/savea" />
 
-        <Button
-            android:id="@+id/btn_edit_cancel"
-            android:layout_width="wrap_content"
+
+        <ImageButton
+            android:id="@+id/imgBtn_edit_cancel"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:text="@string/btn_edit_discard" />
+            android:background="@color/white"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="17dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/closea" />
     </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dip"
+        android:layout_height="1dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_below="@id/lyt_btn_container"
         android:background="@color/grey" />
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/linearlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_margin="1dp"
         android:background="@color/white"
         android:orientation="horizontal"
-        android:padding="5dp"
+        android:padding="3dp"
         android:layout_below="@id/lyt_btn_container">
         <TextView
+            android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="当前图层：  " />
+
         <TextView
             android:id="@+id/textview_layer"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/lyt_btn_container" />
-    </LinearLayout>
+            android:layout_toEndOf="@+id/name"
+            android:text="null"/>
+
+        <TextView
+            android:id="@+id/dataTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="null"/>
+    </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dip"
+        android:layout_height="1dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_below="@id/linearlayout"
         android:background="@color/grey" />
 
-    <ListView
-        android:id="@+id/list_view"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearlayout"
+        android:layout_above="@+id/linearlayout2">
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_toStartOf="@+id/verView">-->
+            <!---->
+
+        <ListView
+            android:id="@+id/list_view1"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="1dp"
+            android:divider="@null"></ListView>
+        <!--</RelativeLayout>-->
+
+        <View
+            android:id="@+id/verView"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/list_view1"
+            android:background="@color/grey" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/verView">
+
+            <ListView
+                android:id="@+id/list_view2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:paddingTop="1dp"
+                android:divider="@null"></ListView>
+
+
+            <View
+                android:id="@+id/horView"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/list_view2"
+                android:background="@color/grey" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/list_view2"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/imageText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="请选择一张照片" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_above="@+id/linearlayout2"
+        android:background="@color/grey" />
+
+    <RelativeLayout
+        android:id="@+id/linearlayout2"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/linearlayout"
-        android:layout_above="@id/btn_selectPicture">
-        <!--android:divider="@drawable/list_divider"-->
-        <!--android:dividerHeight="10dp"-->
-    </ListView>
+        android:layout_height="43dp"
+        android:layout_alignParentBottom="true">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dip"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_above="@id/btn_selectPicture"
-        android:background="@color/grey" />
+        <ImageButton
+            android:id="@+id/imgBtn_takePhoto"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/photos"
+            android:scaleType="fitCenter"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:layout_marginStart="17dp"
+            android:layout_centerVertical="true"
+            android:background="@color/white"/>
 
-    <Button
-        android:id="@+id/btn_selectPicture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="@string/btn_selectPicture" />
+        <ImageButton
+            android:id="@+id/imgBtn_position"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/position"
+            android:scaleType="fitCenter"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:background="@color/white"/>
+
+
+        <ImageButton
+            android:id="@+id/imgBtn_choosePhoto"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/choosephoto"
+            android:scaleType="fitCenter"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:layout_marginEnd="17dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>
